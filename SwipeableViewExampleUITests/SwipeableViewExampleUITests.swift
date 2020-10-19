@@ -22,13 +22,37 @@ class SwipebleViewExampleUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testUIComponent() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+                app.launch()
+        
+        let swipeToSeeActions1StaticText = app.staticTexts["Swipe to see actions 1"]
+        swipeToSeeActions1StaticText.swipeLeft()
+        sleep(1)
+        app.buttons["Note"].tap()
+        sleep(1)
+        
+        swipeToSeeActions1StaticText.tap()
+        // Button should be hidden after tapping
+        XCTAssert(!app.buttons["Note"].exists)
+        
+        let swipeToSeeActionsStaticText2 = app.staticTexts["Swipe to see actions 2"]
+        swipeToSeeActionsStaticText2.swipeRight()
+        
+        let swipeToSeeActionsStaticText = app.staticTexts["Swipe to see actions"]
+        sleep(1)
+        swipeToSeeActionsStaticText.swipeRight()
+        sleep(1)
+        XCTAssert(app.buttons["Delete"].exists)
+        XCTAssert(app.buttons.count == 2 )
+        
+        app.buttons.firstMatch.tap()
+        sleep(1)
+        
+        XCTAssert(app.buttons.count == 1)
+        
+        
     }
 
     func testLaunchPerformance() throws {

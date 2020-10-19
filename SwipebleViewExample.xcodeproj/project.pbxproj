@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		096CA80E25374F62006CA9A3 /* SwipeableView in Frameworks */ = {isa = PBXBuildFile; productRef = 096CA80D25374F62006CA9A3 /* SwipeableView */; };
+		097AA8B62539930500DF81BF /* SwipeableView in Frameworks */ = {isa = PBXBuildFile; productRef = 097AA8B52539930500DF81BF /* SwipeableView */; };
+		097AA8BC253DDD5300DF81BF /* SwipeableView in Frameworks */ = {isa = PBXBuildFile; productRef = 097AA8BB253DDD5300DF81BF /* SwipeableView */; };
 		09B420772531DC3F00AC5307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B420762531DC3F00AC5307 /* AppDelegate.swift */; };
 		09B420792531DC3F00AC5307 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B420782531DC3F00AC5307 /* SceneDelegate.swift */; };
 		09B4207B2531DC3F00AC5307 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B4207A2531DC3F00AC5307 /* ContentView.swift */; };
@@ -57,7 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				096CA80E25374F62006CA9A3 /* SwipeableView in Frameworks */,
+				097AA8BC253DDD5300DF81BF /* SwipeableView in Frameworks */,
+				097AA8B62539930500DF81BF /* SwipeableView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +165,8 @@
 			);
 			name = SwipebleViewExample;
 			packageProductDependencies = (
-				096CA80D25374F62006CA9A3 /* SwipeableView */,
+				097AA8B52539930500DF81BF /* SwipeableView */,
+				097AA8BB253DDD5300DF81BF /* SwipeableView */,
 			);
 			productName = SwipebleViewExample;
 			productReference = 09B420732531DC3F00AC5307 /* SwipebleViewExample.app */;
@@ -237,7 +240,7 @@
 			);
 			mainGroup = 09B4206A2531DC3F00AC5307;
 			packageReferences = (
-				096CA80C25374F62006CA9A3 /* XCRemoteSwiftPackageReference "Swipeable-View" */,
+				097AA8BA253DDD5300DF81BF /* XCRemoteSwiftPackageReference "Swipeable-View" */,
 			);
 			productRefGroup = 09B420742531DC3F00AC5307 /* Products */;
 			projectDirPath = "";
@@ -543,7 +546,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z97DRS4UT9;
-				INFOPLIST_FILE = SwipebleViewExampleUITests/Info.plist;
+				INFOPLIST_FILE = SwipeableViewExampleUITests/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,7 +566,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z97DRS4UT9;
-				INFOPLIST_FILE = SwipebleViewExampleUITests/Info.plist;
+				INFOPLIST_FILE = SwipeableViewExampleUITests/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -619,20 +622,24 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		096CA80C25374F62006CA9A3 /* XCRemoteSwiftPackageReference "Swipeable-View" */ = {
+		097AA8BA253DDD5300DF81BF /* XCRemoteSwiftPackageReference "Swipeable-View" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mroffmix/Swipeable-View.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				minimumVersion = 0.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		096CA80D25374F62006CA9A3 /* SwipeableView */ = {
+		097AA8B52539930500DF81BF /* SwipeableView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 096CA80C25374F62006CA9A3 /* XCRemoteSwiftPackageReference "Swipeable-View" */;
+			productName = SwipeableView;
+		};
+		097AA8BB253DDD5300DF81BF /* SwipeableView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 097AA8BA253DDD5300DF81BF /* XCRemoteSwiftPackageReference "Swipeable-View" */;
 			productName = SwipeableView;
 		};
 /* End XCSwiftPackageProductDependency section */
