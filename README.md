@@ -34,6 +34,60 @@ Can be applied without list to every view.
 
 ![Swipeable View](https://github.com/mroffmix/SwipebleView/blob/main/Resources/WholeScreen.gif)
 
+## Code sample
+
+# Independent view
+```swift
+
+var leftActions = [
+        Action(title: "Note", iconName: "pencil", bgColor: .note, action: {}),
+        Action(title: "Edit doc", iconName: "doc.text", bgColor: .edit, action: {}),
+        Action(title: "New doc", iconName: "doc.text.fill", bgColor: .done, action: {}),
+    ]
+    
+SwipeableView(content: {
+                        Text("Swipe to see actions")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(Color.gray)
+                        
+                    },
+                    leftActions: Example.leftActions,
+                    rightActions: Example.rightActions,
+                    rounded: false) // there are two styles 
+                    .frame(height: 90)
+```
+Create object of SwManager
+
+```swift
+var container = SwManager()
+```
+Create arrays with actions:
+
+```swift
+var leftActions = [
+        Action(title: "Note", iconName: "pencil", bgColor: .note, action: {}),
+        Action(title: "Edit doc", iconName: "doc.text", bgColor: .edit, action: {}),
+        Action(title: "New doc", iconName: "doc.text.fill", bgColor: .done, action: {}),
+    ]
+    
+static var rightActions = [
+        Action(title: "Delete", iconName: "trash", bgColor: .delete, action: {})
+    ]
+```
+
+SwipeableView usage:
+
+```swift
+SwipeableView(content: {
+  // Your view content here 
+  },
+  leftActions: Example.leftActions,
+  rightActions: Example.rightActions,
+  rounded: false)
+  .frame(height: 90)
+
+```
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
